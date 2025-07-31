@@ -3,5 +3,5 @@ services:
     name: shivona-tunes
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run main.py
+    startCommand: streamlit run Home.py
     plan: free
