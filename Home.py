@@ -3,7 +3,7 @@ import tempfile
 import time
 import requests
 from io import BytesIO
-from moviepy import VideoFileClip
+from moviepy.video.io.VideoFileClip import VideoFileClip
 import vd
 
 st.set_page_config(page_title="Shivona Tunes", page_icon="logo.png", layout="wide")
