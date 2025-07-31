@@ -141,6 +141,8 @@ margin: 10px 0;
 
 if "y" not in st.session_state.keys():
     st.session_state["y"]=0
+if "songs" not in st.session_state.keys():
+    st.session_state["songs"]=0
 
 def coubtn():
     if "song_count" not in st.session_state or len(str(st.session_state["song_count"])) == 0:
