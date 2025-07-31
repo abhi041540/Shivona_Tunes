@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: shivona-tunes
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run main.py
+    plan: free
