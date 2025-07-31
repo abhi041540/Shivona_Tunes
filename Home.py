@@ -133,6 +133,10 @@ padding: 60px 10px 0 10px;
     float: unset;
     width: 100%;
 }
+.st-emotion-cache-bfgnao, .st-emotion-cache-1weic72
+{
+float:left;
+}
 </style>""", unsafe_allow_html=True)
 
 

@@ -233,7 +233,7 @@ col1 = st.columns(4)
 with col1[0]:
     st.header("Shivona Tunes")
 st.title("Prepare Your Song In One Click")
-st.info("Upload Your Songs To Merge Ang Edit Them!")
+st.info("Upload Your Songs To Merge And Edit Them!")
 
 if st.session_state["y"]==0:
     col = st.columns(2)
