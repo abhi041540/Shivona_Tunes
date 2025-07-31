@@ -23,4 +23,4 @@ def getURL(youtube_url):
         return "not"
 
 if __name__== "__main__":
-  print(getURL("https://www.youtube.com/watch?v=n2dVFdqMYGA&list=RDn2dVFdqMYGA&start_radio=1"))
+  print(getURL("https://youtu.be/9pIXNy-pS10?feature=shared"))
