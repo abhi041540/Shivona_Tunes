@@ -159,21 +159,38 @@ def dwf():
 
             else:
                 if sdata["type"]==".mp3" :
-                    try:
-                        cont = requests.get(url)
-                        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp_video:
-                            tmp_video.write(cont.content)
-                            tmp_video_path = tmp_video.name
-                        video_clip = VideoFileClip(tmp_video_path)
-                        audio_temp_path = tmp_video_path.replace(".mp4", ".mp3")
-                        video_clip.audio.write_audiofile(audio_temp_path)
-                        with open(audio_temp_path, "rb") as f:
-                            audio_bytesio = BytesIO(f.read())
-                        st.session_state["data"] = audio_bytesio
-                        st.session_state["y"] = 3
-                    except:
-                        st.toast("Somthing Went Wrong Try Again Later!")
-                        st.session_state["y"] = 0
+                        try:
+                            cont = requests.get(url)
+                            if sdata["type"] == ".mp3":
+                                # Ensure the content is actually video
+                                content_type = cont.headers.get("Content-Type", "")
+                                if "video" not in content_type:
+                                    st.toast("The file is not a valid video format.")
+                                    st.session_state["y"] = 0
+                                    return
+
+                                with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as tmp_video:
+                                    tmp_video.write(cont.content)
+                                    tmp_video.flush()  # Ensure data is written
+                                    tmp_video_path = tmp_video.name
+
+                                video_clip = VideoFileClip(tmp_video_path)
+                                audio_temp_path = tmp_video_path.replace(".mp4", ".mp3")
+                                video_clip.audio.write_audiofile(audio_temp_path)
+
+                                with open(audio_temp_path, "rb") as f:
+                                    audio_bytesio = BytesIO(f.read())
+
+                                st.session_state["data"] = audio_bytesio
+                                st.session_state["y"] = 3
+                            else:
+                                st.session_state["data"] = BytesIO(cont.content)
+                                st.session_state["y"] = 1
+
+                        except Exception as e:
+                            st.toast(f"Something went wrong: {e}")
+                            st.session_state["y"] = 0
+
                 else:
                     cont = requests.get(url)
                     st.session_state["data"] = BytesIO(cont.content)
