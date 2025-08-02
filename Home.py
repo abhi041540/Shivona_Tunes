@@ -151,7 +151,7 @@ def dwf():
     sdata=st.session_state
     link=sdata["link_box"]
     if len(link) != 0:
-        if link.find("youtu") != -1 and link.find("=shared")!=-1:
+        if link.find("youtu") != -1:
             st.session_state["y"]=2
             url=None
             url= vd.getURL(st.session_state["link_box"])
