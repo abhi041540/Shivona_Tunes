@@ -140,6 +140,10 @@ float:left;
 </style>""", unsafe_allow_html=True)
 
 
+def csc():
+    st.session_state["y"]=0
+
+
 if "y" not in st.session_state.keys():
     st.session_state["y"] = 0
 video=None
@@ -221,14 +225,16 @@ with col[2]:
             label="Download 📽️",
             data=st.session_state["data"],
             file_name="Shivona_Tunes.mp4",
-            mime="video/mp4"
+            mime="video/mp4",
+            on_click=csc
         )
     elif st.session_state["y"]==3:
             st.download_button(
                 label="Download 🎶",
                 data=st.session_state["data"],
                 file_name="Shivona_Tunes.mp3",
-                mime="audio/mpeg"
+                mime="audio/mpeg",
+                on_click=csc
             )
     elif st.session_state["y"]==0:
         coll=st.columns(2)
