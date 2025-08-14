@@ -41,7 +41,7 @@ Paste your YouTube link, choose MP3 or MP4, and download instantly.
 
 ### 🎚️ Media Editing Dashboard
 
-![Media Editor](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189572/s96wvjpmf6azehzdfjxq.png)
+![Media Editor](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189566/ckeyqcyd8kf3mooazrns.png)
 
 Trim, merge, and manipulate your media files with precision.
 
@@ -49,7 +49,7 @@ Trim, merge, and manipulate your media files with precision.
 
 ### 🎵 Multi-Track Composition Panel
 
-![Multi-Track Editor](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189566/ckeyqcyd8kf3mooazrns.png)
+![Multi-Track Editor](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189690/jfmvlihwojek9ayqduuh.png)
 
 Add multiple tracks, layer sounds, and build your own masterpiece.
 
@@ -57,7 +57,7 @@ Add multiple tracks, layer sounds, and build your own masterpiece.
 
 ### 📊 Format Selection & Workflow
 
-![Format Selection](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189690/jfmvlihwojek9ayqduuh.png)
+![Format Selection](https://res.cloudinary.com/dqjorntxe/image/upload/v1755189572/s96wvjpmf6azehzdfjxq.png)
 
 Choose your format, edit your media, and export with ease.
 
